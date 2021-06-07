@@ -18,7 +18,7 @@ stages {
         }
         stage('Test') {
             steps {
-                sh "echo 'fase success'"
+                sh 'npm test'
             }
         }
         stage('Deploy') {
