@@ -13,33 +13,17 @@ stages {
         stage('Build') {
             steps {
                 sh 'npm install'
-              
-                echo 'Building..'
             }
         }
         stage('Test') {
             steps {
                 sh 'npm test'
-                echo 'Testing..'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'npm start'
             }
         }
     }
-  post {
-      always {          
-          deleteDir()
-           sh "echo 'fase always'"
-      }
-      success {
-            sh "echo 'fase success'"
-        }
-
-      failure {
-            sh "echo 'fase failure'"
-      }   
-  }
 }  
