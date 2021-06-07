@@ -13,16 +13,18 @@ stages {
         stage('Build') {
             steps {
                 sh 'npm install'
+                sh 'npm run build'
             }
         }
         stage('Test') {
             steps {
-                sh 'npm test'
+                sh "echo 'fase success'"
             }
         }
         stage('Deploy') {
             steps {
-                echo 'npm start'
+                sh 'sudo rm -rf /var/www/jenkins-react-app'
+                sh 'sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/'
             }
         }
     }
