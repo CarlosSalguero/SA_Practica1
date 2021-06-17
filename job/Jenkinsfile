@@ -21,6 +21,11 @@ stages {
                 sh 'npm test'
             }
         }
+        stage('Fabric') {
+            steps {
+                sh 'python3 /fabric/backend.py
+            }
+        }
         stage('Deploy') {
             steps {
                 sh 'sudo rm -rf /var/www/html/jenkins-react-app'
