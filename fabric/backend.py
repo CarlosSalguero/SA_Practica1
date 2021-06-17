@@ -11,7 +11,4 @@ c = Connection(
     },
 )
 
-with c.cd("/"):
-
-    result = c.run("ls")
-    c.close()
+c.run("whoami")
