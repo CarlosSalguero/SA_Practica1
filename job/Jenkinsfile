@@ -12,9 +12,7 @@ pipeline {
 stages {
        stage('Fabric') {
             steps {
-                sh 'ls'
-                sh 'cd /fabric'
-                sh 'ls'
+                sh 'ls ${WORKSPACE}/fabric'
             }
         }
 
