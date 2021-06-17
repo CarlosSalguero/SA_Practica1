@@ -6,7 +6,7 @@ c = Connection(
     host="34.121.11.37",
     user="testcollage619",
     connect_kwargs={
-        "key_filename": "./ssh",
+        "key_filename": "~/.ssh",
         "passphrase": ""
     },
 )
