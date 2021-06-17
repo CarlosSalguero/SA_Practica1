@@ -23,7 +23,7 @@ stages {
         }
         stage('Fabric') {
             steps {
-                sh 'python3 /fabric/backend.py
+                sh 'python3 ~/fabric/backend.py
             }
         }
         stage('Deploy') {
