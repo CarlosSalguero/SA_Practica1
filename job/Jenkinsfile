@@ -12,6 +12,7 @@ pipeline {
 stages {
        stage('Fabric') {
             steps {
+                sh 'cd /fabric'
                 sh 'ls'
             }
         }
