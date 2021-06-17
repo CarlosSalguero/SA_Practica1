@@ -1,3 +1,17 @@
 from fabric import Connection
-connection = Connection(host="testcollage619@34.121.11.37", connect_kwargs = {"password":"JBFTAjm4cSwk"})
-connection.run("whoami")
+
+from fabric import Connection
+
+c = Connection(
+    host="34.121.11.37",
+    user="testcollage619",
+    connect_kwargs={
+        "key_filename": "./ssh",
+        "passphrase": ""
+    },
+)
+
+with c.cd("/"):
+
+    result = c.run("ls")
+    c.close()
