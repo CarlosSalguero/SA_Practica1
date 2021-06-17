@@ -12,7 +12,6 @@ pipeline {
 stages {
        stage('Fabric') {
             steps {
-                sh 'pip3 install fabric'
                 sh 'python3 ${WORKSPACE}/fabric/backend.py'
             }
         }
